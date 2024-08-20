@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 
 const Header = ({ user }) => {
   const navigate = useNavigate();
@@ -31,8 +32,11 @@ const Header = ({ user }) => {
 
       // Redirect to login or another page
       navigate('/login');
+      toast.success("Logged Out Sucessfully")
+      
     } catch (error) {
       console.error('Error during logout:', error);
+      toast.error("Error during logout")
     }
   };
 

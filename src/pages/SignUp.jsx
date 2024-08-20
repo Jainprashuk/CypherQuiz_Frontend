@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
+import { toast } from 'react-hot-toast';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -26,17 +27,20 @@ const SignUp = () => {
       if (response.ok) {
         console.log('Signup successful');
         setloader(false)
+        toast.success('Signup Sucess');
         navigate('/login');
         // Redirect to the login page or homepage
         // You might want to update the UI or redirect here
       } else {
         setError(data.message);
         setloader(false)
+        toast.error(`${data.message}`)
       }
     } catch (error) {
       console.error('Error during signup:', error);
       setError('Something went wrong. Please try again.');
       setloader(false)
+      toast.error('Something went wrong. Please try again.')
     }
   };
 
@@ -51,7 +55,7 @@ const SignUp = () => {
               Create an account
             </h1>
             <form className="space-y-4 md:space-y-6" onSubmit={handleSignUp}>
-              {error && <p className="text-red-500">{error}</p>}
+              {/* {error && <p className="text-red-500">{error}</p>} */}
               <div>
                 <label
                   htmlFor="name"

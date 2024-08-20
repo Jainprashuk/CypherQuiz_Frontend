@@ -7,6 +7,7 @@ import Submit from './pages/Submit';
 import ProtectedRoutes from './Components/ProtectedRoutes';
 import LandingPage from './pages/LandingPage';
 import Instructions from './Components/Instructions';
+import { Toaster } from 'react-hot-toast';
 // import { useState , useEffect } from 'react';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
   
   return (
     <>
+    <Toaster />
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />

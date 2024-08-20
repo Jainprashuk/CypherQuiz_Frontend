@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -23,19 +24,23 @@ const Login = () => {
       const { token, message } = await response.json();
   
       if (response.ok) {
+        toast.success('Login Sucess');
         console.log('Login successful');
         // Store the token in session storage
         sessionStorage.setItem('token', token);
         navigate('/home');
         setloader(false)
+        
       } else {
         setError(message || 'An error occurred');
         setloader(false)
+        toast.error(`${message}`)
       }
     } catch (error) {
       console.error('Error during login:', error);
       setError('Something went wrong. Please try again.');
       setloader(false)
+      toast.error(`Something went wrong. Please try again.`)
     }
   };
   
@@ -51,7 +56,7 @@ const Login = () => {
               Login
             </h1>
             <form className="space-y-4 md:space-y-6" onSubmit={handleLogin}>
-              {error && <p className="text-red-500">{error}</p>}
+              {/* {error && <p className="text-red-500">{error}</p>} */}
               <div>
                 <label
                   htmlFor="email"

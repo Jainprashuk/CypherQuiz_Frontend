@@ -88,7 +88,7 @@ This platform was developed as part of a Full-Stack Developer assignment. It pro
    2. Password : 1234
 
 ## Sreenshots Of working Application
-![Screenshot 2](./pics/one.png)
+![Screenshot 2](./pics/first.png)
 ![Screenshot 3](./pics/two.png)
 ![Screenshot 4](./pics/three.png)
 ![Screenshot 5](./pics/four.png)

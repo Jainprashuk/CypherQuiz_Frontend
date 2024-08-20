@@ -7,9 +7,17 @@ const ProtectedRoutes = ({ children }) => {
   const token = document.cookie.includes('token'); 
 
   console.log(token);
+
+  if (token) {
+    return children;
+  }else{
+    console.log("yeh he dikkat");
+    
+    return <Navigate to="/login" />
+  }
   
 
-  return token ? children : <Navigate to="/login" />;
+  // return token ? children : <Navigate to="/login" />;
 };
 
 export default ProtectedRoutes;

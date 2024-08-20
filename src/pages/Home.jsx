@@ -70,7 +70,7 @@ const Home = () => {
       {!show ? (
         <>
           <Header user={user} />
-          <section className="flex-grow flex items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-gray-200">
+          <section className="flex-grow min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-gray-200">
             <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-6xl">
               <h1 className="text-4xl font-bold leading-none sm:text-5xl">
                 Welcome to{" "}

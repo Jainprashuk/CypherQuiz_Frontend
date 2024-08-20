@@ -2,12 +2,16 @@
 
 This repository contains the code for the Full-Stack Developer Assignment, a web-based platform that allows students to take multiple-choice questions (MCQ) tests. The platform manages user authentication, test administration, and evaluation, and displays results to users.
 
+## Backend Repository Link :
+[CypherQuiz Backend Repository](https://github.com/Jainprashuk/CypherQuiz_Backend)
+
+
 ## Introduction
 
 This platform was developed as part of a Full-Stack Developer assignment. It provides a test environment where students can log in, take an MCQ test, and receive their scores via email. The platform is built using React for the frontend and Node.js with Express for the backend, with MongoDB as the database.
 
 ## Features
-
+- **User Interface**:Intuitive and User-Friendly Interface with Dark & Light Mode
 - **User Authentication**: Secure login system using email and password.
 - **Test Environment**: 
   - Request permissions for camera and microphone access.
@@ -30,36 +34,42 @@ This platform was developed as part of a Full-Stack Developer assignment. It pro
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the Frontend repository:
 
    ```bash
    git clone https://github.com/Jainprashuk/CypherQuiz_Frontend.git
-   cd test-environment-platform
+   cd CypherQuiz_Frontend
+   
+2. Clone the Backend repository:
 
-2. Install dependencies for  frontend :
+   ```bash
+   git clone https://github.com/Jainprashuk/CypherQuiz_Backend.git
+   cd CypherQuiz_Backend
+
+3. Install dependencies for  frontend :
 
    ``` bash
-   cd client
+   cd CypherQuiz_Frontend
    npm install
 
-3. Install dependencies for  Backend :
+4. Install dependencies for  Backend :
    ``` bash
-   cd ../server
+   cd CypherQuiz_Backend
    npm install
 
-3. Create a .env file in the root directory of the server and add the following variables:
+5. Create a .env file in the root directory of the server and add the following variables:
    ```bash
    PORT=3000
    MONGOURL=mongodb+srv://<user>:<pass>@cluster0.xjwn7dv.mongodb.net/
 
-4. Start the Backend development server:
+6. Start the Backend development server:
    ```bash
    cd CypherQuiz_Backend
    npm start
    
-5. Start the Frontend development server:
+7. Start the Frontend development server:
    ```bash
-   cd CypherQuiz_frontend
+   cd CypherQuiz_Frontend
    npm run dev
 
 ## Cron-Job Mail
@@ -88,7 +98,7 @@ This platform was developed as part of a Full-Stack Developer assignment. It pro
    2. Password : 1234
 
 ## Sreenshots Of working Application
-![Screenshot 2](./pics/one.png)
+![Screenshot 2](./pics/first.png)
 ![Screenshot 3](./pics/two.png)
 ![Screenshot 4](./pics/three.png)
 ![Screenshot 5](./pics/four.png)

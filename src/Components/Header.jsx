@@ -21,7 +21,7 @@ const Header = ({ user }) => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:3000/auth/logout",
+        "https://cypher-quiz-backend.vercel.app/auth/logout",
         {},
         { withCredentials: true }
       );

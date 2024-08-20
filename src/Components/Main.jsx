@@ -15,7 +15,7 @@ const Main = ({ user }) => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('http://localhost:3000/questions');
+        const response = await fetch('https://cypher-quiz-backend.vercel.app/questions');
         if (!response.ok) {
           throw new Error('Failed to fetch questions');
         }
@@ -87,7 +87,7 @@ const Main = ({ user }) => {
     }
 
     try {
-      await fetch('http://localhost:3000/api/submit-quiz', {
+      await fetch('https://cypher-quiz-backend.vercel.app/api/submit-quiz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user: user._id, answers: updatedResponses }),

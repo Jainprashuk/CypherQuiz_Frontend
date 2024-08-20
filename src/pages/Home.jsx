@@ -37,7 +37,7 @@ const Home = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/auth/check",
+          "https://cypher-quiz-backend.vercel.app/api/auth/check",
           { withCredentials: true }
         );
         setUser(response.data.user);

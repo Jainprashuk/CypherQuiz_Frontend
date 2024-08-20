@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoutes = ({ children }) => {
-    // console.log("i am here");
+    console.log("i am here");
     
   const token = document.cookie.includes('token'); 
 

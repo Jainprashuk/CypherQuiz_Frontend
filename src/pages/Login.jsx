@@ -15,24 +15,24 @@ const Login = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
-        credentials: 'include', // Include cookies in the request
       });
-
-      const data = await response.json();
-
+  
+      const { token, message } = await response.json();
+  
       if (response.ok) {
         console.log('Login successful');
+        // Store the token in session storage
+        sessionStorage.setItem('token', token);
         navigate('/home');
-        // Redirect to the dashboard or homepage
-        // You might want to update the UI or redirect here
       } else {
-        setError(data.message);
+        setError(message || 'An error occurred');
       }
     } catch (error) {
       console.error('Error during login:', error);
       setError('Something went wrong. Please try again.');
     }
   };
+  
 
   return (
     <>

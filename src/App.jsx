@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/home" element={
           <ProtectedRoutes>
           <Home />
-        // </ProtectedRoutes>
+         </ProtectedRoutes>
         } />
         <Route path="/submit" element={
           <ProtectedRoutes>

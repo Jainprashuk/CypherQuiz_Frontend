@@ -54,8 +54,8 @@ const Header = ({ user }) => {
         </button>
 
         {user && (
-          <div className="hidden sm:flex items-center space-x-4">
-            <span className="text-lg text-gray-700 dark:text-gray-200">
+          <div className="flex items-center space-x-4">
+            <span className=" hidden sm:block text-lg text-gray-700 dark:text-gray-200">
               Welcome, {user.name} 👋
             </span>
             <button

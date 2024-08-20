@@ -11,7 +11,7 @@ This repository contains the code for the Full-Stack Developer Assignment, a web
 This platform was developed as part of a Full-Stack Developer assignment. It provides a test environment where students can log in, take an MCQ test, and receive their scores via email. The platform is built using React for the frontend and Node.js with Express for the backend, with MongoDB as the database.
 
 ## Features
-
+- **User Interface**:Intuitive and User-Friendly Interface with Dark & Light Mode
 - **User Authentication**: Secure login system using email and password.
 - **Test Environment**: 
   - Request permissions for camera and microphone access.

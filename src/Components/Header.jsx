@@ -20,14 +20,19 @@ const Header = ({ user }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post(
-        "https://cypher-quiz-backend.vercel.app/auth/logout",
-        {},
-        { withCredentials: true }
-      );
-      navigate("/");
+      // Call the logout endpoint
+      await fetch('https://cypher-quiz-backend.vercel.app/auth/logout', {
+        method: 'POST',
+        credentials: 'include', // Include cookies if necessary
+      });
+
+      // Clear the token from session storage
+      sessionStorage.removeItem('token');
+
+      // Redirect to login or another page
+      navigate('/login');
     } catch (error) {
-      console.error("Error logging out:", error);
+      console.error('Error during logout:', error);
     }
   };
 

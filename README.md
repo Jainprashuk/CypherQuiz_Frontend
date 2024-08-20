@@ -30,36 +30,42 @@ This platform was developed as part of a Full-Stack Developer assignment. It pro
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the Frontend repository:
 
    ```bash
    git clone https://github.com/Jainprashuk/CypherQuiz_Frontend.git
-   cd test-environment-platform
+   cd CypherQuiz_Frontend
+   
+2. Clone the Backend repository:
 
-2. Install dependencies for  frontend :
+   ```bash
+   git clone https://github.com/Jainprashuk/CypherQuiz_Backend.git
+   cd CypherQuiz_Backend
+
+3. Install dependencies for  frontend :
 
    ``` bash
-   cd client
+   cd CypherQuiz_Frontend
    npm install
 
-3. Install dependencies for  Backend :
+4. Install dependencies for  Backend :
    ``` bash
-   cd ../server
+   cd CypherQuiz_Backend
    npm install
 
-3. Create a .env file in the root directory of the server and add the following variables:
+5. Create a .env file in the root directory of the server and add the following variables:
    ```bash
    PORT=3000
    MONGOURL=mongodb+srv://<user>:<pass>@cluster0.xjwn7dv.mongodb.net/
 
-4. Start the Backend development server:
+6. Start the Backend development server:
    ```bash
    cd CypherQuiz_Backend
    npm start
    
-5. Start the Frontend development server:
+7. Start the Frontend development server:
    ```bash
-   cd CypherQuiz_frontend
+   cd CypherQuiz_Frontend
    npm run dev
 
 ## Cron-Job Mail

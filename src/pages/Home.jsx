@@ -36,19 +36,32 @@ const Home = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
+        const token = sessionStorage.getItem("token"); // Retrieve the token from sessionStorage
+        if (!token) {
+          setError("No token found");
+          return;
+        }
+  
         const response = await axios.get(
           "https://cypher-quiz-backend.vercel.app/api/auth/check",
-          { withCredentials: true }
+          {
+            headers: {
+              Authorization: `Bearer ${token}` // Send the token in the Authorization header
+            },
+            withCredentials: true
+          }
         );
+        
         setUser(response.data.user);
       } catch (error) {
         console.error("Error fetching user data", error);
         setError("Failed to fetch user data");
       }
     };
-
+  
     fetchUser();
   }, []);
+  
 
   // console.log(user.name);
 
